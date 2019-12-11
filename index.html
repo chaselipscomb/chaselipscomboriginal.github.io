@@ -1,113 +1,298 @@
 <!DOCTYPE html>
 <html>
-<title>Chase Lipscomb Portfolio</title>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<link rel="stylesheet" href="style.css">
-<style>
-body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
-</style>
-<body class="w3-light-grey w3-content" style="max-width:1600px">
+  <title>Chase Lipscomb Portfolio</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+  <link
+    rel="stylesheet"
+    href="https://fonts.googleapis.com/css?family=Raleway"
+  />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+  />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    body,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      font-family: "Raleway", sans-serif;
+    }
+  </style>
+  <body class="w3-light-grey w3-content" style="max-width:1600px">
+    <!-- Sidebar/menu -->
+    <nav
+      class="w3-sidebar w3-collapse w3-white w3-animate-left"
+      style="z-index:3;width:300px;"
+      id="mySidebar"
+    >
+      <br />
+      <div class="w3-container">
+        <a
+          href="#"
+          onclick="w3_close()"
+          class="w3-hide-large w3-right w3-jumbo w3-padding w3-hover-grey"
+          title="close menu"
+        >
+          <i class="fa fa-remove"></i>
+        </a>
+        <img
+          src="assets/profilepic.PNG"
+          style="width:45%;"
+          class="w3-round"
+        /><br /><br />
+        <h4><b>PORTFOLIO</b></h4>
+        <p class="w3-text-grey"></p>
+      </div>
+      <div class="w3-bar-block">
+        <a
+          href="#portfolio"
+          onclick="w3_close()"
+          class="w3-bar-item w3-button w3-padding<!-- w3-text-teal-->"
+          ><i class="fa fa-th-large fa-fw w3-margin-right"></i>PORTFOLIO</a
+        >
+        <a
+          href="#about"
+          onclick="w3_close()"
+          class="w3-bar-item w3-button w3-padding"
+          ><i class="fa fa-user fa-fw w3-margin-right"></i>ABOUT</a
+        >
+        <a
+          href="#contact"
+          onclick="w3_close()"
+          class="w3-bar-item w3-button w3-padding"
+          ><i class="fa fa-envelope fa-fw w3-margin-right"></i>CONTACT</a
+        >
+      </div>
+      <div class="w3-panel w3-large">
+        <a href="https://www.facebook.com/ChaseLipscomb97"
+          ><i
+            class="fa fa-facebook-official w3-hover-opacity"
+            id="socialMediaFaceBook"
+          ></i
+        ></a>
+        <a href="https://www.instagram.com/_chasel/"
+          ><i class="fa fa-instagram w3-hover-opacity" id="socialMediaInsta"></i
+        ></a>
+        <a href="https://www.linkedin.com/in/chase-lipscomb-982b50148/"
+          ><i
+            class="fa fa-linkedin w3-hover-opacity"
+            id="socialMediaLinkedIn"
+          ></i
+        ></a>
+        <a href="https://github.com/chaselipscomb"
+          ><i class="fa fa-github w3-hover-opacity" id="socialMediaGitHub"></i
+        ></a>
+      </div>
+    </nav>
 
-<!-- Sidebar/menu -->
-<nav class="w3-sidebar w3-collapse w3-white w3-animate-left" style="z-index:3;width:300px;" id="mySidebar"><br>
-  <div class="w3-container">
-    <a href="#" onclick="w3_close()" class="w3-hide-large w3-right w3-jumbo w3-padding w3-hover-grey" title="close menu">
-      <i class="fa fa-remove"></i>
-    </a>
-    <img src="assets/profilepic.PNG" style="width:45%;" class="w3-round"><br><br>
-    <h4><b>PORTFOLIO</b></h4>
-    <p class="w3-text-grey"></p>
-  </div>
-  <div class="w3-bar-block">
-    <a href="#portfolio" onclick="w3_close()" class="w3-bar-item w3-button w3-padding<!-- w3-text-teal-->"><i class="fa fa-th-large fa-fw w3-margin-right"></i>PORTFOLIO</a> 
-    <a href="#about" onclick="w3_close()" class="w3-bar-item w3-button w3-padding"><i class="fa fa-user fa-fw w3-margin-right"></i>ABOUT</a> 
-    <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button w3-padding"><i class="fa fa-envelope fa-fw w3-margin-right"></i>CONTACT</a>
-  </div>
-  <div class="w3-panel w3-large">
-    <a href="https://www.facebook.com/ChaseLipscomb97"><i class="fa fa-facebook-official w3-hover-opacity" id="socialMediaFaceBook"></i></a>
-    <a href="https://www.instagram.com/_chasel/"><i class="fa fa-instagram w3-hover-opacity" id="socialMediaInsta"></i></a>
-    <a href="https://www.linkedin.com/in/chase-lipscomb-982b50148/"><i class="fa fa-linkedin w3-hover-opacity" id="socialMediaLinkedIn"></i></a>
-    <a href="https://github.com/chaselipscomb"><i class="fa fa-github w3-hover-opacity" id="socialMediaGitHub"></i></a>
+    <!-- Overlay effect when opening sidebar on small screens -->
+    <div
+      class="w3-overlay w3-hide-large w3-animate-opacity"
+      onclick="w3_close()"
+      style="cursor:pointer"
+      title="close side menu"
+      id="myOverlay"
+    ></div>
 
-</div>
-</nav>
-
-<!-- Overlay effect when opening sidebar on small screens -->
-<div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
-
-<!-- !PAGE CONTENT! -->
-<div class="w3-main" style="margin-left:300px">
-
-  <!-- Header -->
-  <header id="portfolio">
-    <a href="#"><img src="assets/profilepic.PNG" style="width:65px;" class="w3-circle w3-right w3-margin w3-hide-large w3-hover-opacity"></a>
-    <span class="w3-button w3-hide-large w3-xxlarge w3-hover-text-grey" onclick="w3_open()"><i class="fa fa-bars"></i></span>
-    <div class="w3-container">
-    <h1><b>My Portfolio</b></h1>
-<div class="w3-section w3-bottombar w3-padding-16">
-  <!--<span class="w3-margin-right">Filter:</span> 
+    <!-- !PAGE CONTENT! -->
+    <div class="w3-main" style="margin-left:300px">
+      <!-- Header -->
+      <header id="portfolio">
+        <a href="#"
+          ><img
+            src="assets/profilepic.PNG"
+            style="width:65px;"
+            class="w3-circle w3-right w3-margin w3-hide-large w3-hover-opacity"
+        /></a>
+        <span
+          class="w3-button w3-hide-large w3-xxlarge w3-hover-text-grey"
+          onclick="w3_open()"
+          ><i class="fa fa-bars"></i
+        ></span>
+        <div class="w3-container">
+          <h1><b>My Portfolio</b></h1>
+          <div class="w3-section w3-bottombar w3-padding-16">
+            <!--<span class="w3-margin-right">Filter:</span> 
       <button class="w3-button w3-black">ALL</button>
       <button class="w3-button w3-white"><i class="fa fa-diamond w3-margin-right"></i>Design</button>
       <button class="w3-button w3-white w3-hide-small"><i class="fa fa-photo w3-margin-right"></i>Photos</button>
       <button class="w3-button w3-white w3-hide-small"><i class="fa fa-map-pin w3-margin-right"></i>Art</button>
-   --></div>
-    </div>
-  </header>
-  
-  <div class="w3-row-padding">
-    <div class="w3-third w3-container w3-margin-bottom">
-        <a href="https://burgeruci.herokuapp.com"><img src="assets/burgerapp.PNG" alt="burgerapp" style="width:100%" class="w3-hover-opacity"></a>
-      <div class="w3-container w3-white">
-        <p><b>Devour Burger!</b></p>
-        <p>This is my first application deployed through Heroku. The user can input a burger name and choose to save it for later, or Devour! it now. The choice will change which column the burger goes into.</p>
-      </div>
-    </div>
-    <div class="w3-third w3-container w3-margin-bottom">
-        <a href="https://note-taker-uci.herokuapp.com/"><img src="assets/notetaker.PNG" alt="Norway" style="width:100%" class="w3-hover-opacity"></a>
-      <div class="w3-container w3-white">
-        <p><b>Note Taker</b></p>
-        <p>This note taker application allows a user to enter notes, and will store them for later! The user may select to view or create notes and a simple and polished user interface.</p>
-      </div>
-    </div>
-    <div class="w3-third w3-container">
-        <a href="#"><img src="assets/bonappafeedme.PNG" alt="Norway" style="width:100%" class="w3-hover-opacity"></a>
-      <div class="w3-container w3-white">
-        <p><b>Coming Soon!</b></p>
-        <p>A website that allows a user to search for unique recipes that contain the ingredients the user already has. In addition, the user can save recipes and search them for later!</p>
-      </div>
-    </div>
-  </div>
+   -->
+          </div>
+        </div>
+      </header>
+      <div class="projects">
+        <div class="w3-row-padding">
+          <div class="w3-third w3-container w3-margin-bottom">
+            <a href="https://herofinder.herokuapp.com/"
+              ><img
+                src="assets/Herofinder.PNG"
+                alt="Hero Finder"
+                style="width:100%"
+                class="w3-hover-opacity"
+            /></a>
+            <div class="w3-container w3-white">
+              <p><b>Hero Finder!</b></p>
+              <p>
+                My <strong>Final Project</strong> for the UCI bootcamp. This app
+                utilizes the SuperHero API to let the user search for any super
+                hero! It uses a React Front-End and MongoDb as a database.
+              </p>
+            </div>
+          </div>
+          <div class="w3-third w3-container w3-margin-bottom">
+            <a href="https://chaselipscomb.github.io/state/"
+              ><img
+                src="assets/State.PNG"
+                alt="State"
+                style="width:100%"
+                class="w3-hover-opacity"
+            /></a>
+            <div class="w3-container w3-white">
+              <p><b>State Store</b></p>
+              <p>
+                My first introducton to State! This small store allows the user
+                to search for an item and add to their cart similar to online
+                retailers!
+              </p>
+            </div>
+          </div>
+          <div class="w3-third w3-container">
+            <a href="#"
+              ><img
+                src="assets/react.PNG"
+                alt="React"
+                style="width:100%"
+                class="w3-hover-opacity"
+            /></a>
+            <div class="w3-container w3-white">
+              <p><b>Employee Directory</b></p>
+              <p>
+                This Employee Directory site uses a random employee generator
+                and can filter the results be gender. My first introduction to
+                React!
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="w3-row-padding">
+          <div class="w3-third w3-container w3-margin-bottom">
+            <a href="https://burgeruci.herokuapp.com"
+              ><img
+                src="assets/burgerapp.PNG"
+                alt="burgerapp"
+                style="width:100%"
+                class="w3-hover-opacity"
+            /></a>
+            <div class="w3-container w3-white">
+              <p><b>Devour Burger!</b></p>
+              <p>
+                This is my first application deployed through Heroku. The user
+                can input a burger name and choose to save it for later, or
+                Devour! it now. The choice will change which column the burger
+                goes into.
+              </p>
+            </div>
+          </div>
+          <div class="w3-third w3-container w3-margin-bottom">
+            <a href="https://note-taker-uci.herokuapp.com/"
+              ><img
+                src="assets/notetaker.PNG"
+                alt="Norway"
+                style="width:100%"
+                class="w3-hover-opacity"
+            /></a>
+            <div class="w3-container w3-white">
+              <p><b>Note Taker</b></p>
+              <p>
+                This note taker application allows a user to enter notes, and
+                will store them for later! The user may select to view or create
+                notes and a simple and polished user interface.
+              </p>
+            </div>
+          </div>
+          <div class="w3-third w3-container">
+            <a href="#"
+              ><img
+                src="assets/bonappafeedme.PNG"
+                alt="Norway"
+                style="width:100%"
+                class="w3-hover-opacity"
+            /></a>
+            <div class="w3-container w3-white">
+              <p><b>Coming Soon!</b></p>
+              <p>
+                A website that allows a user to search for unique recipes that
+                contain the ingredients the user already has. In addition, the
+                user can save recipes and search them for later!
+              </p>
+            </div>
+          </div>
+        </div>
 
-  <!-- First Photo Grid-->
-  <div class="w3-row-padding">
-    <div class="w3-third w3-container w3-margin-bottom">
-        <a href="https://chaselipscomb.github.io/Project-1/"><img src="assets/bookReviewSnippet.PNG" alt="Norway" style="width:100%" class="w3-hover-opacity"></a>
-      <div class="w3-container w3-white">
-        <p><b>Book Review Website</b></p>
-        <p>My first project at the UCI bootcamp. This is a webpage that allows a user to enter a book, and uses API's to access data about the books reviews and pricing.</p>
+        <!-- First Photo Grid-->
+        <div class="w3-row-padding">
+          <div class="w3-third w3-container w3-margin-bottom">
+            <a href="https://chaselipscomb.github.io/Project-1/"
+              ><img
+                src="assets/bookReviewSnippet.PNG"
+                alt="Norway"
+                style="width:100%"
+                class="w3-hover-opacity"
+            /></a>
+            <div class="w3-container w3-white">
+              <p><b>Book Review Website</b></p>
+              <p>
+                My first project at the UCI bootcamp. This is a webpage that
+                allows a user to enter a book, and uses API's to access data
+                about the books reviews and pricing.
+              </p>
+            </div>
+          </div>
+          <div class="w3-third w3-container w3-margin-bottom">
+            <a href="https://chaselipscomb.github.io/Planner/"
+              ><img
+                src="assets/plannerSnippet.PNG"
+                alt="Norway"
+                style="width:100%"
+                class="w3-hover-opacity"
+            /></a>
+            <div class="w3-container w3-white">
+              <p><b>Day Planner</b></p>
+              <p>
+                This small project is a day Planner. A user inputs their to-do
+                list by the hour and is able to save it to storage. Moment is
+                also implemented to show you what the current hour is.
+              </p>
+            </div>
+          </div>
+          <div class="w3-third w3-container">
+            <a href="https://chaselipscomb.github.io/codequiz/"
+              ><img
+                src="assets/codequizSnippet.PNG"
+                alt="Norway"
+                style="width:100%"
+                class="w3-hover-opacity"
+            /></a>
+            <div class="w3-container w3-white">
+              <p><b>Code Quiz</b></p>
+              <p>
+                This is one of my first homework assignments using JavaScript
+                and jQuery. A user can take this timed quiz and have their score
+                saved to the leaderboards.
+              </p>
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
-    <div class="w3-third w3-container w3-margin-bottom">
-        <a href="https://chaselipscomb.github.io/Planner/"><img src="assets/plannerSnippet.PNG" alt="Norway" style="width:100%" class="w3-hover-opacity"></a>
-      <div class="w3-container w3-white">
-        <p><b>Day Planner</b></p>
-        <p>This small project is a day Planner. A user inputs their to-do list by the hour and is able to save it to storage. Moment is also implemented to show you what the current hour is.</p>
-      </div>
-    </div>
-    <div class="w3-third w3-container">
-        <a href="https://chaselipscomb.github.io/codequiz/"><img src="assets/codequizSnippet.PNG" alt="Norway" style="width:100%" class="w3-hover-opacity"></a>
-      <div class="w3-container w3-white">
-        <p><b>Code Quiz</b></p>
-        <p>This is one of my first homework assignments using JavaScript and jQuery. A user can take this timed quiz and have their score saved to the leaderboards.</p>
-      </div>
-    </div>
-  </div>
-  
-  <!-- Second Photo Grid
+
+      <!-- Second Photo Grid
   <div class="w3-row-padding">
     <div class="w3-third w3-container w3-margin-bottom">
       <img src="assets/nextProject.jpg" alt="Norway" style="width:100%" class="w3-hover-opacity">
@@ -132,8 +317,8 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
     </div>
   </div>-->
 
-  <!-- Pagination -->
-  <!--<div class="w3-center w3-padding-32">
+      <!-- Pagination -->
+      <!--<div class="w3-center w3-padding-32">
     <div class="w3-bar">
       <a href="#" class="w3-bar-item w3-button w3-hover-black">«</a>
       <a href="#" class="w3-bar-item w3-black w3-button">1</a>
@@ -144,8 +329,8 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
     </div>
   </div>-->
 
-  <!-- Images of Me -->
-<!--<div class="w3-row-padding w3-padding-16" id="about">
+      <!-- Images of Me -->
+      <!--<div class="w3-row-padding w3-padding-16" id="about">
     <div class="w3-col m6">
       <img src="assets/avatar_g.jpg" alt="Me" style="width:100%">
     </div>
@@ -154,33 +339,31 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
     </div>
   </div>-->
 
-  <div class="w3-container w3-padding-large" style="margin-bottom:32px">
-    <h4><b>Brand Statement</b></h4>
-    <p>Full Stack Web Developer leveraging a degree in sustainable business to create a unique user experience on the web. Recently earned a certificate in Full Stack Web Development from the University of California, Irvine with a newly developed skill set in JavaScript, CSS, HTML and complimented by jQuery and responsive web design. Looked upon as a determined problem solver that aims to provide engaging applications on a mobile-first design and development. Each project narrows my aim on impactful user experiences to engage the user. Recently I applied a unique web development technique called Ajax to retrieve data from 3rd party API’s including Amazon Web Services to create a website that provides booklovers with access to new books, reviews, pricing, etc. Eager to use cutting edge skills in the future on a passionate, quality-driven team to build new user friendly experiences on the web.</p>
-    <hr>
-    
-    <h4>Technical Skills</h4>
-    <!-- Progress bars / Skills -->
-    <p>HTML/CSS</p>
-    <div class="w3-grey">
-      <div class="w3-container w3-dark-grey w3-padding w3-center" style="width:80%">80%</div>
-    </div>
-    <p>JavaScript</p>
-    <div class="w3-grey">
-      <div class="w3-container w3-dark-grey w3-padding w3-center" style="width:75%">75%</div>
-    </div>
-    <p>Responsive Design</p>
-    <div class="w3-grey">
-      <div class="w3-container w3-dark-grey w3-padding w3-center" style="width:70%">70%</div>
-    </div>
-    <p><a href="https://docs.google.com/document/d/1CD_BrU4xuXrEvQFoPnS9KHSBvygXt064XQ1idJCUt1Q/edit">
-      <button class="w3-button w3-dark-grey w3-padding-large w3-margin-top w3-margin-bottom">
-        <i class="fa fa-download w3-margin-right"></i>View Resume
-      </button>
-    </p></a>
-    <hr>
-    
-<!--<h4>How much I charge</h4>
+      <div class="w3-container w3-padding-large" style="margin-bottom:32px">
+        <h4><b>Brand Statement</b></h4>
+        <p>
+          I am a Full Stack Web Developer with a Bachelor of Arts degree in
+          Environmental Business from the University of Redlands. Recently, I
+          earned my Full Stack Web Development certificate from the University
+          of Irvine, California which promotes unique and user first designs. My
+          skill set currently includes JavaScript, HTML, and CSS which is
+          complemented by newer technologies such asReact and ES6. I am also
+          equipped with leadership skills obtained from competing in four years
+          of college tennis, as well as perseverance and discipline which
+          allowed me to obtain 3x All-American titles. As an individual, I aim
+          to provide applications that are both user-friendly and designed for
+          multi-platform usage.
+        </p>
+        <hr />
+        <h4><b>Technical Skills</b></h4>
+        <h6><b>Languages:</b> <span>JavaScript, HTML, CSS</span></h6>
+        <h6><b>Databases:</b> <span>MySQL, MongoDB, Sequelize, Mongoose</span></h6>
+        <h6><b>Technologies:</b> <span>React, jQuery, ES6, Node.js</span></h6>
+        <h6><b>FrameWorks:</b> <span>Materialize, Bootstrap</span></h6>
+
+        <hr />
+
+        <!--<h4>How much I charge</h4>
     <!-- Pricing Tables 
     <div class="w3-row-padding" style="margin:0 -16px">
       <div class="w3-third w3-margin-bottom">
@@ -234,45 +417,70 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
         </ul>
       </div>
     </div>-->
-  </div>
-  
-  <!-- Contact Section -->
-  <div class="w3-container w3-padding-large w3-grey">
-    <h4 id="contact"><b>Contact Me</b></h4>
-    <div class="w3-row-padding w3-center w3-padding-24" style="margin:0 -16px">
-      <div class="w3-third w3-dark-grey">
-        <p><i class="fa fa-envelope w3-xxlarge w3-text-light-grey"></i></p>
-        <p>chaselipscomb97@email.com</p>
       </div>
-      <div class="w3-third w3-teal">
-        <p><i class="fa fa-map-marker w3-xxlarge w3-text-light-grey"></i></p>
-        <p>Irvine, CA</p>
-      </div>
-      <div class="w3-third w3-dark-grey">
-        <p><i class="fa fa-phone w3-xxlarge w3-text-light-grey"></i></p>
-        <p>(949) 233-5881</p>
-      </div>
-    </div>
-    <hr class="w3-opacity">
-    <form action="/action_page.php" target="_blank">
-      <div class="w3-section">
-        <label>Name</label>
-        <input class="w3-input w3-border" type="text" name="Name" required>
-      </div>
-      <div class="w3-section">
-        <label>Email</label>
-        <input class="w3-input w3-border" type="text" name="Email" required>
-      </div>
-      <div class="w3-section">
-        <label>Message</label>
-        <input class="w3-input w3-border" type="text" name="Message" required>
-      </div>
-      <a href=’mailto:chaselipscomb97@gmail.com’><button type="submit" class="w3-button w3-black w3-margin-bottom"><i class="fa fa-paper-plane w3-margin-right"></i>Send Message</button></a> 
-    </form>
-  </div>
 
-  <!-- Footer -->
- <!-- <footer class="w3-container w3-padding-32 w3-dark-grey">
+      <!-- Contact Section -->
+      <div class="w3-container w3-padding-large w3-grey">
+        <h4 id="contact"><b>Contact Me</b></h4>
+        <div
+          class="w3-row-padding w3-center w3-padding-24"
+          style="margin:0 -16px"
+        >
+          <div class="w3-third w3-dark-grey">
+            <p><i class="fa fa-envelope w3-xxlarge w3-text-light-grey"></i></p>
+            <p>chaselipscomb97@email.com</p>
+          </div>
+          <div class="w3-third w3-teal">
+            <p>
+              <i class="fa fa-map-marker w3-xxlarge w3-text-light-grey"></i>
+            </p>
+            <p>Irvine, CA</p>
+          </div>
+          <div class="w3-third w3-dark-grey">
+            <p><i class="fa fa-phone w3-xxlarge w3-text-light-grey"></i></p>
+            <p>(949) 233-5881</p>
+          </div>
+        </div>
+        <hr class="w3-opacity" />
+        <form action="/action_page.php" target="_blank">
+          <div class="w3-section">
+            <label>Name</label>
+            <input
+              class="w3-input w3-border"
+              type="text"
+              name="Name"
+              required
+            />
+          </div>
+          <div class="w3-section">
+            <label>Email</label>
+            <input
+              class="w3-input w3-border"
+              type="text"
+              name="Email"
+              required
+            />
+          </div>
+          <div class="w3-section">
+            <label>Message</label>
+            <input
+              class="w3-input w3-border"
+              type="text"
+              name="Message"
+              required
+            />
+          </div>
+          <a href="’mailto:chaselipscomb97@gmail.com’"
+            ><button type="submit" class="w3-button w3-black w3-margin-bottom">
+              <i class="fa fa-paper-plane w3-margin-right" id="redButton"></i
+              >Disabled
+            </button></a
+          >
+        </form>
+      </div>
+
+      <!-- Footer -->
+      <!-- <footer class="w3-container w3-padding-32 w3-dark-grey">
   <div class="w3-row-padding">
     <div class="w3-third">
       <h3>FOOTER</h3>
@@ -309,24 +517,32 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
 
   </div>
   </footer>-->
-  
-  <div class="w3-black w3-center w3-padding-24">Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-opacity">w3.css</a></div>
 
-<!-- End page content -->
-</div>
+      <div class="w3-black w3-center w3-padding-24">
+        Powered by
+        <a
+          href="https://www.w3schools.com/w3css/default.asp"
+          title="W3.CSS"
+          target="_blank"
+          class="w3-hover-opacity"
+          >w3.css</a
+        >
+      </div>
 
-<script>
-// Script to open and close sidebar
-function w3_open() {
-    document.getElementById("mySidebar").style.display = "block";
-    document.getElementById("myOverlay").style.display = "block";
-}
- 
-function w3_close() {
-    document.getElementById("mySidebar").style.display = "none";
-    document.getElementById("myOverlay").style.display = "none";
-}
-</script>
+      <!-- End page content -->
+    </div>
 
-</body>
+    <script>
+      // Script to open and close sidebar
+      function w3_open() {
+        document.getElementById("mySidebar").style.display = "block";
+        document.getElementById("myOverlay").style.display = "block";
+      }
+
+      function w3_close() {
+        document.getElementById("mySidebar").style.display = "none";
+        document.getElementById("myOverlay").style.display = "none";
+      }
+    </script>
+  </body>
 </html>

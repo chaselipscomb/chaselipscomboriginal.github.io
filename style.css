@@ -10,3 +10,10 @@
 #socialMediaGitHub {
     font-size: 35px;
 }
+.projects {
+    height: 400px;
+    overflow: auto;
+}
+#redButton {
+    background-color: red;
+}
